@@ -200,7 +200,7 @@ paths:
         '500':
           description: Internal Server Error
 
-    patch:
+    patch: # put oblige de renvoyer toute la transaction en entier ?
      #Màj divers data
       security: [{ Bearer: [] }]
       tags: [Transactions]

@@ -11,14 +11,14 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const auth = useSelector((state) => state.auth); // on lit l’état du login
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
+  const auth = useSelector((state) => state.auth);
+  const dispatch = useDispatch(); // permet l'envoi du succes
+  const navigate = useNavigate(); // permet la redirection vers profil après le login 
 
   // fonction appelée à la soumission du formulaire
   async function handleSubmit(e) {
     e.preventDefault(); // empêche le rechargement de la page
-    dispatch(clearError()); // réinitialise une ancienne erreur
+    dispatch(clearError());
 
     try {
       // appel à l'API

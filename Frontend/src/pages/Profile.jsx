@@ -7,7 +7,7 @@ import { fetchProfile, updateUserNameServer } from "../redux/userSlice";
 function Profile() {
   const dispatch = useDispatch();
   const { userProfile, loading, error, updating, updateError } = useSelector(
-    (state) => state.user
+    (state) => state.user //récupère la partie user du state global 
   );
 
   // état local pour l’édition du userName 
