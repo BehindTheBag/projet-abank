@@ -10,11 +10,11 @@ function Profile() {
     (state) => state.user
   );
 
-  // état local pour l’édition du userName (le seul champ éditable côté API)
+  // état local pour l’édition du userName 
   const [editing, setEditing] = useState(false);
   const [userName, setUserName] = useState("");
 
-  // récupérer le profil
+  // récupération du profil
   useEffect(() => {
     dispatch(fetchProfile());
   }, [dispatch]);

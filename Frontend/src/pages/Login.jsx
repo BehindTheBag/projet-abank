@@ -21,7 +21,7 @@ function Login() {
     dispatch(clearError()); // réinitialise une ancienne erreur
 
     try {
-      // appel à l'API (selon ton Swagger)
+      // appel à l'API
       const res = await api.post("/user/login", { email, password });
 
       // le token est dans res.data.body.token
@@ -37,7 +37,7 @@ function Login() {
       // on redirige vers /profile
       navigate("/profile");
     } catch (err) {
-      // si erreur, on l’enregistre dans Redux (message lisible)
+      // si erreur, on l’enregistre dans Redux 
       const msg =
         err.response?.data?.message ||
         err.message ||
